@@ -4,55 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de IMC</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        input {
-            width: 94.4%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .resultado {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 1.2em;
-        }
-    </style>
-<style type="text/css" id="dcoder_stylesheet"><div class="resultado" id="resultado" style="font-size: 1.5em;"></div></style></head>
+    <link rel="stylesheet" href="style.css">
+    
+    <div class="resultado" style="font-size: 100% ;"></div>
+</head>
 <body>
     <div class="container">
         <h1>Calculadora de IMC</h1>
@@ -69,15 +24,18 @@
         var altura = parseFloat(document.getElementById('altura').value);
         var resultadoDiv = document.getElementById('resultado');
         
-        if (isNaN(peso) || isNaN(altura)) {
+        if (peso <=0 || altura <=0) {
             alert('Por favor, insira valores válidos.');
             return;
-        }
+        
+        } else {
 
+        
+    
         var imc = peso / (altura * altura);
         var classificacao = '';
         var corClassificacao = '';
-
+        
         if (imc < 18.5) {
             classificacao = 'Abaixo do peso';
             corClassificacao = 'blue';  // Cor azul para abaixo do peso
@@ -97,6 +55,7 @@
             classificacao = 'Obesidade Grau 3';
             corClassificacao = 'darkred';  // Cor vermelho escuro para obesidade grau 3
         }
+    }
 
         // Exibe o resultado com a cor correspondente
         resultadoDiv.innerHTML = 'IMC: ' + imc.toFixed(2) + '<br>Classificação: ' + classificacao;
