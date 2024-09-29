@@ -1,3 +1,51 @@
+/* Header */
+header {
+    
+    padding: 10px 20px;
+    position: absolute; /* Posiciona no topo da página */
+    top: 0;
+    left: 0;
+    width: auto; /* Faz com que o header ocupe toda a largura */
+}
+
+.header-container {
+    display: flex; /* Alinha os botões horizontalmente */
+    justify-content: flex-start; /* Alinha os botões à esquerda */
+    gap: 7px; /* Espaçamento entre os botões */
+    margin-left: auto; /* Distância da borda esquerda */
+}
+
+.header-btn {
+    background-color: #28a745; /* Cor do botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.header-btn:hover {
+    background-color: #1a7c31; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.header-btn:active {
+    background-color: #146d29; /* Cor ao clicar */
+}
+
+/* Tornando o layout responsivo */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: flex; /* Torna os botões empilhados em telas pequenas */
+    }
+
+    .header-btn {
+        width: 80%; /* Botões maiores em dispositivos móveis */
+    }
+}
+
 
 body {
     font-family: Arial, sans-serif;
