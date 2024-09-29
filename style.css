@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
 .container {
     background-color: #fff;
@@ -45,6 +46,7 @@ button:hover {
     margin-top: 20px;
     font-size: 1.2em;
 }
+
 .warning {
     background-color: #fff3cd;
     border: 1px solid #ffeeba;
@@ -52,11 +54,17 @@ button:hover {
     padding: 15px;
     border-radius: 5px;
     font-size: 14px;
+    min-width: none;
+    min-height: none;
     max-width: 600px;
+    max-height: 480px;
+    width: auto;
+    height: auto;
     text-align: center;
     line-height: 1.5;
-    margin-top: 500px; /* Move para baixo */
-    margin-left: -535px; /* Move para a esquerda */
+    display: flex;
+    margin-top: 2.5vh;
+    
 }
 
 
