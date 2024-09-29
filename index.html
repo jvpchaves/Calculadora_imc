@@ -6,10 +6,17 @@
     <title>Calculadora de IMC</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    
     <div class="resultado" style="font-size: 100% ;"></div>
 </head>
 <body>
+    <header>
+        <div class="header-container">
+            <button class="header-btn">Home</button>
+            <button class="header-btn">Sobre</button>
+            <button class="header-btn">Contato</button>
+        </div>
+    </header>
+    
     <div class="container">
         <h1>Calculadora de IMC</h1>
         <input type="number" id="peso" placeholder="Peso em kg">
@@ -17,11 +24,15 @@
         <button onclick="calcularIMC()">Calcular IMC</button>
         <div class="resultado" id="resultado"></div>
     </div>
-    
+
+
+
+<footer> 
     <div class="warning">
-        <strong>Aviso:</strong> Esta calculadora é apenas uma ferramenta básica de cálculo e não deve ser usada como um medidor de saúde. 
-            Ela não leva em consideração fatores importantes como massa muscular, gordura corporal, ou outras condições físicas. 
-            Para uma avaliação mais precisa de sua saúde, consulte um médico ou nutricionista.
-    </div>
+    <strong>Aviso:</strong> Esta calculadora é apenas uma ferramenta básica de cálculo e não deve ser usada como um medidor de saúde. 
+    Ela não leva em consideração fatores importantes como massa muscular, gordura corporal, ou outras condições físicas. 
+    Para uma avaliação mais precisa de sua saúde, consulte um médico ou nutricionista.
+        </div>
+</footer>
 </body>
 </html>
